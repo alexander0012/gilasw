@@ -20,8 +20,6 @@ public class UserController {
 
     @GetMapping("/all")
     public List<User> getUserAll() {
-        var users = userService.findAllUsers();
-        users.size();
-        return users;
+        return userService.findAllUsers();
     }
 }
