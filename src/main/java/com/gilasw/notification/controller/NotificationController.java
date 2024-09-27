@@ -19,7 +19,7 @@ public class NotificationController {
     @Autowired
     NotificationService notificationService;
 
-    @PostMapping("sendNotification")
+    @PostMapping("/sendNotification")
     public void sendNotification(@RequestBody RequestSendNotification requestBody) {
         if (!StringUtils.hasText(requestBody.getMessage())) {
             throw new MessageEmptyException("Message cannot be empty, bad request in the body", new Throwable());
